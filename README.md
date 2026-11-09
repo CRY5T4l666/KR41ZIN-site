@@ -1,1 +1,1 @@
-# KR41ZIN-site.
+# KR41ZIN-site
