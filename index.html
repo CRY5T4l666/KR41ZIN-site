@@ -1,95 +1,152 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KR41ZIN | CS2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0d">
+<title>KR41ZIN | FACEIT PLAYER</title>
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;background:#090b12;color:#fff;
+ margin:0;background:#0b0b0d;color:#fff;
  font-family:Arial,sans-serif;
 }
-main{max-width:850px;margin:auto;padding:35px 20px}
+main{max-width:900px;margin:auto;padding:25px 18px}
 .hero{
  text-align:center;padding:65px 15px;
- background:linear-gradient(145deg,#202d4b,#10131e);
- border:1px solid #34415e;border-radius:25px;
+ background:linear-gradient(145deg,#292929,#111);
+ border:1px solid #ff5500;border-radius:22px;
+ box-shadow:0 10px 40px #ff550022;
 }
-.logo{font-size:58px;font-weight:900;color:#76a9ff}
-.tag{color:#a8b7d5;letter-spacing:4px}
-h1{font-size:38px;margin:15px 0}
-h2{margin-top:35px}
-p{color:#aeb8ca;line-height:1.6}
+.logo{
+ font-size:60px;font-weight:900;
+ color:#ff5500;letter-spacing:2px;
+}
+.tag{color:#aaa;letter-spacing:5px}
+h1{font-size:34px}
+h2{color:#ff6500;margin-top:40px}
+p{color:#bbb;line-height:1.7}
+.level{
+ display:inline-block;background:#ff5500;
+ color:white;padding:10px 22px;
+ border-radius:6px;font-weight:bold;
+}
 .stats{
  display:grid;grid-template-columns:1fr 1fr;
- gap:12px;margin-top:25px
+ gap:14px;margin-top:20px
 }
 .card{
- background:#151a27;border:1px solid #29344a;
- border-radius:16px;padding:22px;text-align:center
+ background:#19191d;border:1px solid #333;
+ border-radius:16px;padding:25px 10px;
+ text-align:center;transition:.2s;
 }
-.number{font-size:30px;font-weight:bold;color:#78aaff}
-.label{color:#aeb8ca;margin-top:8px}
+.card:hover{
+ border-color:#ff5500;
+ transform:translateY(-3px)
+}
+.number{
+ font-size:34px;font-weight:900;color:#ff6500;
+}
+.label{color:#aaa;margin-top:10px;font-size:13px}
 .info{
- background:#151a27;border-radius:16px;
- padding:22px;margin-top:15px;
- border:1px solid #29344a
+ background:#19191d;border:1px solid #333;
+ border-radius:15px;padding:20px;margin-top:15px
 }
-footer{text-align:center;color:#68748b;padding:35px}
+.prize{
+ background:linear-gradient(135deg,#302016,#171717);
+ border:1px solid #ff6500;
+ border-radius:17px;padding:28px;
+ text-align:center;
+}
+.prize .number{font-size:46px}
+.map{
+ display:flex;justify-content:space-between;
+ align-items:center;padding:13px 5px;
+ border-bottom:1px solid #333;
+ color:#eee;font-weight:bold;
+}
+.map:last-child{border:0}
+.map span:last-child{color:#ff6500}
+.weapon{
+ text-align:center;font-size:24px;
+ color:#ff6500;font-weight:bold;
+}
+footer{text-align:center;color:#666;padding:40px 10px}
+@media(max-width:400px){
+ .logo{font-size:45px}
+ h1{font-size:27px}
+ .number{font-size:27px}
+ .stats{gap:9px}
+}
 </style>
 </head>
 <body>
 <main>
+
 <section class="hero">
-<div class="logo">KR41ZIN</div>
-<div class="tag">COUNTER-STRIKE 2</div>
-<h1>Александр</h1>
-<p>CS2 Player | FACEIT Level 10</p>
+ <div class="logo">KR41ZIN</div>
+ <div class="tag">FACEIT PLAYER</div>
+ <h1>Александр Ободенко</h1>
+ <p>COUNTER-STRIKE 2</p>
+ <span class="level">FACEIT LEVEL 10</span>
 </section>
 
-<h2>МОЯ СТАТИСТИКА</h2>
+<h2>PLAYER STATISTICS</h2>
 <section class="stats">
-<div class="card">
-<div class="number">2500</div>
-<div class="label">Максимальный ELO</div>
-</div>
-<div class="card">
-<div class="number">10</div>
-<div class="label">FACEIT Level</div>
-</div>
-<div class="card">
-<div class="number">20 000</div>
-<div class="label">Premier Rating</div>
-</div>
-<div class="card">
-<div class="number">3500+</div>
-<div class="label">Часов в CS2</div>
-</div>
+ <div class="card">
+  <div class="number">3000</div>
+  <div class="label">FACEIT ELO</div>
+ </div>
+ <div class="card">
+  <div class="number">10</div>
+  <div class="label">FACEIT LEVEL</div>
+ </div>
+ <div class="card">
+  <div class="number">20 000</div>
+  <div class="label">PREMIER RATING</div>
+ </div>
+ <div class="card">
+  <div class="number">3500+</div>
+  <div class="label">HOURS IN CS2</div>
+ </div>
 </section>
 
-<h2>ОБО МНЕ</h2>
-<div class="info">
-<p>Counter-Strike — больше чем игра.
-Основной упор на FACEIT и Premier.
-Люблю соревновательную игру и командную работу.</p>
+<h2>CAREER EARNINGS</h2>
+<div class="prize">
+ <div class="label">TOTAL PRIZE MONEY</div>
+ <div class="number">$100,000</div>
+ <p>Общие призовые за карьеру</p>
 </div>
 
-<h2>ЛЮБИМЫЕ КАРТЫ</h2>
+<h2>ABOUT ME</h2>
 <div class="info">
-<p>🎯 Mirage</p>
-<p>🎯 Anubis</p>
+ <p>
+ Александр Ободенко — KR41ZIN.
+ Counter-Strike 2 — моя игра.
+ Основной упор на FACEIT и Premier.
+ Постоянное развитие и стремление к победе.
+ </p>
 </div>
 
-<h2>МОЁ ОРУЖИЕ</h2>
+<h2>FAVOURITE MAPS</h2>
 <div class="info">
-<p>AWP — мой основной выбор.</p>
+ <div class="map"><span>🎯 MIRAGE</span><span>01</span></div>
+ <div class="map"><span>🎯 ANUBIS</span><span>02</span></div>
+ <div class="map"><span>🎯 DUST 2</span><span>03</span></div>
+</div>
+
+<h2>MAIN WEAPON</h2>
+<div class="info">
+ <div class="weapon">AWP</div>
+ <p style="text-align:center">MY SIGNATURE WEAPON</p>
 </div>
 
 <footer>
-KR41ZIN © 2026<br>
-COUNTER-STRIKE 2
+ KR41ZIN © 2026<br>
+ COUNTER-STRIKE 2 PLAYER
 </footer>
+
 </main>
 </body>
 </html>
