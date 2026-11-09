@@ -77,6 +77,48 @@ footer{text-align:center;color:#777;padding:35px 0}
  h1{font-size:29px}
  .number{font-size:32px}
  .card{padding:20px 6px}
+}/* KR41ZIN PREMIUM EFFECTS */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero, .card, .info, .social, .prize {
+    transition: all 0.35s ease;
+}
+
+.hero:hover {
+    box-shadow: 0 0 35px #ff550044;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #ff5500;
+    box-shadow: 0 0 25px #ff550044;
+}
+
+.social:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #ff550066;
+}
+
+.logo {
+    text-shadow: 0 0 25px #ff550066;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: appear 1s ease;
 }
 </style>
 </head>
