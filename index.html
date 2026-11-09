@@ -5,20 +5,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080808">
-<meta name="description" content="KR41ZIN — Counter-Strike 2 FACEIT player">
+<meta name="description" content="KR41ZIN — Counter-Strike 2 player">
 <title>KR41ZIN | CS2 PLAYER</title>
 
 <style>
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   background: #080808;
-  color: #fff;
+  color: #f5f5f5;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
@@ -29,365 +30,281 @@ body::before {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 50% 0%, #ffffff12, transparent 55%),
-    radial-gradient(ellipse at 50% 100%, #ffffff08, transparent 60%);
+    radial-gradient(ellipse at 50% 10%, #292929 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 100%, #171717 0%, transparent 50%);
   z-index: -1;
 }
 
-main {
-  max-width: 900px;
+.container {
+  width: min(1100px, 92%);
   margin: auto;
-  padding: 28px 18px;
-  animation: appear 1s ease;
 }
 
 .hero {
-  position: relative;
-  overflow: hidden;
+  margin: 35px auto 55px;
+  padding: 45px 22px;
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(145deg,#202020,#080808);
-  border: 1px solid #555;
-  border-radius: 22px;
-  box-shadow: 0 0 35px #ffffff12;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: #ffffff09;
-  filter: blur(65px);
-  top: -120px;
-  left: calc(50% - 125px);
-}
-
-.photo {
-  position: relative;
-  width: 190px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 2px solid #aaa;
-  box-shadow: 0 0 25px #ffffff25;
-  margin-bottom: 25px;
+  border: 1px solid #444;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #202020, #090909 65%);
+  box-shadow: 0 0 55px #ffffff0b;
+  animation: appear 1s ease;
 }
 
 .logo {
-  font-size: 58px;
-  font-weight: 1000;
-  letter-spacing: 3px;
-  color: white;
-  text-shadow: 0 0 25px #ffffff55;
+  width: min(330px, 75%);
+  display: block;
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 0 22px #ffffff25);
 }
 
-.tag {
-  color: #999;
-  letter-spacing: 6px;
-  font-size: 14px;
-  margin-top: 8px;
+.nickname {
+  font-size: clamp(42px, 9vw, 76px);
+  font-weight: 900;
+  letter-spacing: 5px;
+  margin-bottom: 12px;
 }
 
-h1 {
-  font-size: 34px;
-  margin: 28px 0 12px;
-}
-
-.hero p {
+.subtitle {
   color: #aaa;
-  letter-spacing: 3px;
+  letter-spacing: 7px;
+  font-size: 14px;
+  margin-bottom: 45px;
+}
+
+.photo {
+  width: min(290px, 85%);
+  height: 390px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 2px solid #777;
+  box-shadow: 0 0 30px #ffffff15;
+  margin-bottom: 35px;
+}
+
+.player-name {
+  font-size: clamp(24px, 5vw, 38px);
+  margin-bottom: 18px;
+}
+
+.game {
+  color: #aaa;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
 }
 
 .level {
   display: inline-block;
-  background: #fff;
+  background: #f5f5f5;
   color: #080808;
-  padding: 12px 25px;
-  border-radius: 5px;
+  padding: 19px 35px;
+  border-radius: 12px;
+  font-size: 19px;
   font-weight: 900;
-  margin-top: 20px;
   letter-spacing: 2px;
 }
 
-h2 {
-  color: #fff;
-  font-size: 25px;
-  letter-spacing: 3px;
-  margin-top: 42px;
-  padding-bottom: 12px;
+.section-title {
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #444;
 }
 
 .stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 65px;
 }
 
-.card {
-  background: linear-gradient(145deg,#202020,#101010);
-  border: 1px solid #444;
-  border-radius: 15px;
-  padding: 25px 10px;
+.stat {
   text-align: center;
+  padding: 35px 12px;
+  border: 1px solid #444;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #202020, #101010);
   transition: .3s;
 }
 
-.number {
-  font-size: 40px;
+.stat:hover {
+  transform: translateY(-5px);
+  border-color: #aaa;
+}
+
+.stat-number {
+  font-size: clamp(30px, 7vw, 48px);
   font-weight: 900;
-  color: white;
-  text-shadow: 0 0 15px #ffffff35;
+  margin-bottom: 12px;
 }
 
-.label {
-  color: #999;
-  margin-top: 12px;
-  font-size: 14px;
-  letter-spacing: 2px;
+.stat-label {
+  color: #aaa;
+  letter-spacing: 3px;
+  font-size: 13px;
 }
 
-.prize {
-  background: linear-gradient(135deg,#222,#090909);
-  border: 1px solid #777;
-  border-radius: 18px;
-  padding: 30px;
-  text-align: center;
-  margin-top: 20px;
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 65px;
 }
 
-.prize .number {
-  font-size: 48px;
-}
-
-.info {
+.detail {
+  border: 1px solid #444;
   background: #151515;
-  border: 1px solid #383838;
-  border-radius: 15px;
-  padding: 22px;
-  line-height: 2;
-  color: #ddd;
-  margin-top: 20px;
+  padding: 25px;
+  border-radius: 18px;
 }
 
-.map {
+.detail h3 {
+  color: #999;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.detail p {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.socials {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #333;
-  padding: 13px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 35px 0 65px;
 }
 
-.map:last-child { border: 0; }
-
-.weapon {
-  text-align: center;
-  font-size: 42px;
-  color: white;
-  font-weight: 900;
-  letter-spacing: 8px;
-}
-
-.social {
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
-  margin-top: 20px;
-}
-
-.social a {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.socials a {
   text-decoration: none;
   color: white;
-  background: linear-gradient(120deg,#202020,#101010);
-  border: 1px solid #444;
-  border-radius: 13px;
-  padding: 19px;
-  font-weight: 900;
-  font-size: 19px;
-  transition: .25s;
+  border: 1px solid #555;
+  background: #171717;
+  padding: 17px 27px;
+  border-radius: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: .3s;
 }
 
-.social a:active {
-  background: #333;
-  transform: scale(.98);
-}
-
-.social svg {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  stroke: white;
-}
-
-.social span {
-  margin-left: auto;
-  color: #aaa;
-  font-size: 13px;
+.socials a:hover {
+  background: white;
+  color: black;
+  border-color: white;
+  transform: translateY(-4px);
 }
 
 footer {
   text-align: center;
+  padding: 30px 10px;
   color: #666;
-  padding: 40px 0;
-  font-size: 12px;
+  border-top: 1px solid #333;
   letter-spacing: 3px;
-  line-height: 2;
+  font-size: 12px;
 }
 
 @keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(22px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@media (hover:hover) {
-  .card:hover {
-    transform: translateY(-6px);
-    border-color: #fff;
-    box-shadow: 0 0 22px #ffffff20;
-  }
-
-  .social a:hover {
-    transform: translateX(5px);
-    border-color: #fff;
-    background: #292929;
-  }
-
-  .hero:hover {
-    box-shadow: 0 0 40px #ffffff25;
-  }
-}
-
-@media(max-width:450px) {
-  main { padding: 18px 13px; }
-  .logo { font-size: 43px; }
-  h1 { font-size: 27px; }
-  h2 { font-size: 21px; }
-  .number { font-size: 32px; }
-  .prize .number { font-size: 39px; }
-  .card { padding: 21px 5px; }
-  .social a { font-size: 16px; padding: 16px; }
+@media (max-width: 600px) {
+  .hero { padding: 30px 15px; }
+  .photo { height: 340px; }
+  .stats, .details { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat { padding: 25px 5px; }
+  .stat-label { font-size: 10px; letter-spacing: 1px; }
+  .detail { padding: 17px 12px; }
+  .detail p { font-size: 17px; }
+  .socials a { padding: 15px 19px; }
 }
 </style>
 </head>
 
 <body>
-<main>
+<main class="container">
 
 <section class="hero">
-<img class="photo" src="IMG_6037.jpeg" alt="KR41ZIN">
-<div class="logo">KR41ZIN</div>
-<div class="tag">ELITE CS2 PLAYER</div>
-<h1>Александр Ободенко</h1>
-<p>COUNTER-STRIKE 2</p>
-<div class="level">FACEIT LEVEL 10</div>
+  <img class="logo" src="KR41ZIN-logo.PNG" alt="KR41ZIN emblem">
+
+  <h1 class="nickname">KR41ZIN</h1>
+  <p class="subtitle">ELITE CS2 PLAYER</p>
+
+  <img class="photo" src="IMG_6037.jpeg" alt="KR41ZIN">
+
+  <h2 class="player-name">Александр Ободенко</h2>
+  <p class="game">COUNTER-STRIKE 2</p>
+  <div class="level">FACEIT LEVEL 10</div>
 </section>
 
-<h2>PLAYER STATISTICS</h2>
+<section>
+  <h2 class="section-title">PLAYER STATISTICS</h2>
 
-<div class="stats">
-<div class="card">
-<div class="number">3000</div>
-<div class="label">FACEIT ELO</div>
-</div>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-number">3000</div>
+      <div class="stat-label">FACEIT ELO</div>
+    </div>
 
-<div class="card">
-<div class="number">10</div>
-<div class="label">FACEIT LEVEL</div>
-</div>
+    <div class="stat">
+      <div class="stat-number">10</div>
+      <div class="stat-label">FACEIT LEVEL</div>
+    </div>
 
-<div class="card">
-<div class="number">20 000</div>
-<div class="label">PREMIER RATING</div>
-</div>
+    <div class="stat">
+      <div class="stat-number">20K</div>
+      <div class="stat-label">PREMIER RATING</div>
+    </div>
 
-<div class="card">
-<div class="number">3500+</div>
-<div class="label">HOURS IN CS2</div>
-</div>
-</div>
+    <div class="stat">
+      <div class="stat-number">3500+</div>
+      <div class="stat-label">HOURS PLAYED</div>
+    </div>
 
-<h2>CAREER EARNINGS</h2>
+    <div class="stat">
+      <div class="stat-number">$100K</div>
+      <div class="stat-label">TOTAL PRIZE MONEY</div>
+    </div>
 
-<div class="prize">
-<div class="label">TOTAL PRIZE MONEY</div>
-<div class="number">$100,000</div>
-<p style="color:#aaa;margin-top:12px">
-Общие призовые за карьеру
-</p>
-</div>
+    <div class="stat">
+      <div class="stat-number">AWP</div>
+      <div class="stat-label">MAIN WEAPON</div>
+    </div>
+  </div>
+</section>
 
-<h2>ABOUT ME</h2>
+<section>
+  <h2 class="section-title">PLAYER PROFILE</h2>
 
-<div class="info">
-Александр Ободенко — KR41ZIN.<br>
-Counter-Strike 2 — моя игра.<br>
-Основной упор на FACEIT и Premier.<br>
-Постоянное развитие и стремление к победе.
-</div>
+  <div class="details">
+    <div class="detail">
+      <h3>FAVOURITE MAPS</h3>
+      <p>Mirage / Anubis / Dust 2</p>
+    </div>
 
-<h2>FAVOURITE MAPS</h2>
+    <div class="detail">
+      <h3>MAIN GAME</h3>
+      <p>FACEIT & Premier</p>
+    </div>
+  </div>
+</section>
 
-<div class="info">
-<div class="map"><b>MIRAGE</b><span>01</span></div>
-<div class="map"><b>ANUBIS</b><span>02</span></div>
-<div class="map"><b>DUST 2</b><span>03</span></div>
-</div>
+<section>
+  <h2 class="section-title">FIND ME ONLINE</h2>
 
-<h2>MAIN WEAPON</h2>
-
-<div class="info">
-<div class="weapon">AWP</div>
-<p style="text-align:center;color:#999">
-MY SIGNATURE WEAPON
-</p>
-</div>
-
-<h2>MY SOCIAL NETWORKS</h2>
-
-<div class="social">
-
-<a href="https://www.twitch.tv/KR41ZIN" target="_blank" rel="noopener noreferrer">
-<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
-<path d="M4 2H22V16L16 22H11V19H7V22H3V5Z"/>
-<path d="M12 6V13M17 6V13"/>
-</svg>
-TWITCH <span>KR41ZIN ↗</span>
-</a>
-
-<a href="https://www.faceit.com/ru/players/KR41ZIN" target="_blank" rel="noopener noreferrer">
-<svg viewBox="0 0 24 24" fill="none" stroke-width="2.3">
-<path d="M3 9L5 5H19L21 9V17H3Z"/>
-<path d="M7 11V15M5 13H9M15 12H15.1M18 14H18.1"/>
-</svg>
-FACEIT <span>KR41ZIN ↗</span>
-</a>
-
-<a href="https://steamcommunity.com/id/KR41ZIN/" target="_blank" rel="noopener noreferrer">
-<svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-<circle cx="15.5" cy="7" r="4"/>
-<circle cx="6" cy="17" r="3"/>
-<path d="M8.5 15.5L13 11M9 18L13 20"/>
-</svg>
-STEAM <span>KR41ZIN ↗</span>
-</a>
-
-</div>
+  <div class="socials">
+    <a href="https://www.faceit.com/ru/players/KR41ZIN" target="_blank">FACEIT</a>
+    <a href="https://steamcommunity.com/id/KR41ZIN/" target="_blank">STEAM</a>
+    <a href="https://www.twitch.tv/KR41ZIN" target="_blank">TWITCH</a>
+  </div>
+</section>
 
 <footer>
-KR41ZIN © 2026<br>
-COUNTER-STRIKE 2 PLAYER<br>
-NO MERCY. ONLY SKILL.
+  KR41ZIN © 2026 — COUNTER-STRIKE 2
 </footer>
 
 </main>
